@@ -1,6 +1,7 @@
 
 [include]
     path  =  ~/Settings/Git/Core
+    path  =  ~/Settings/Git/Init
     path  =  ~/Settings/Git/UserInterface
     path  =  ~/Settings/Git/Alias
 
