@@ -1,7 +1,9 @@
 
 [extensions]
 color       =
+convert     =
 graphlog    =
+# hggit     =  ~/tools/hg-git/hggit
 histedit    =
 mq          =
 rebase      =

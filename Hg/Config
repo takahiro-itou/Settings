@@ -1,0 +1,7 @@
+
+[ui]
+allowemptycommit    = 1
+rewrite.empty-successor = keep
+
+[convert]
+hg.ignoreerrors     = True
