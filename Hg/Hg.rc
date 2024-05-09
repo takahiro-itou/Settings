@@ -2,11 +2,4 @@
 %include  ~/Settings/Hg/Extension
 %include  ~/Settings/Hg/Alias
 %include  ~/Settings/Hg/CommitLogs
-
-[ui]
-allowemptycommit    = 1
-rewrite.empty-successor = keep
-
-[convert]
-hg.ignoreerrors=True
-
+%include  ~/Settings/Hg/Config
