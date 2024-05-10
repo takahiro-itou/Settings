@@ -1,7 +1,13 @@
 
-[ui]
-allowemptycommit    = 1
-rewrite.empty-successor = keep
-
 [convert]
-hg.ignoreerrors     = True
+hg.ignoreerrors     = true
+
+[subrepos]
+allowed         = true
+git:allowed     = true
+hg:allowed      = true
+svn:allowed     = false
+
+[ui]
+allowemptycommit        = 1
+rewrite.empty-successor = keep
