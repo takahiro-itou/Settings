@@ -11,6 +11,8 @@ record      =
 strip       =
 transplant  =
 
+convert-omit-sub-repos  = ~/tools/hg-convert/omitsubrepos.py
+
 [bookmarks]
 track.current  =  True
 
