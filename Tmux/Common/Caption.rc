@@ -47,8 +47,8 @@ set-option -g status-right '%Y/%m/%d(%a) %H:%M:%S'
 ##
 
 set-window-option -g window-status-current-format   \
-    '#[bg=colour15,fg=colour9,bold] #I #W'
-set-window-option -g window-status-format '#[fg=colour4] #I #W'
+    '#[bg=colour15,fg=colour9,bold] [#S]#I:#W'
+set-window-option -g window-status-format '#[fg=colour4] #I:#W'
 
 ##################################################################
 ##
