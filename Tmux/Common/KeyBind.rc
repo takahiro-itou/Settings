@@ -50,6 +50,14 @@ bind-key  -T copy-mode-vi   Escape  send-keys -X cancel
 bind-key            L         choose-tree -N -w
 bind-key            l         run-shell     \
     'tmux choose-tree -Nw -f "##{==:##{session_name},#{session_name}}"'
+
+bind-key            S-Left    previous-window
+bind-key            h         previous-window
+bind-key            C-h       previous-window
+bind-key            S-Right   next-window
+bind-key            j         next-window
+bind-key            C-j       next-window
+
 bind-key  -T root   C-Left    previous-window
 bind-key  -T root   C-Right   next-window
 
