@@ -5,6 +5,8 @@ if [ $1 = 'disable' ] ; then
     tmux  set-option @nested "N${nested}"
     tmux  set-option prefix None
     tmux  set-option status-style  bg=red
+    tmux  unbind-key  -T root   C-Left
+    tmux  unbind-key  -T root   C-Right
     test "${nested}" = "" || tmux send-keys  $2
 elif [ $1 = 'change' ] ; then
     nested=$(tmux show-option -v @nested)
@@ -20,6 +22,7 @@ else
         tmux  set-option satus-style  bg=white
         tmux  unbind-key        C-z
         tmux  set-option prefix C-a
+        tmux  source-file  ~/Settings/Tmux/Common/KeyBind-Root.rc
     else
         tmux  send-keys  $2
     fi
