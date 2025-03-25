@@ -6,9 +6,15 @@
 
 # プレフィックスキーを screen と同じ Ctl-a  に変更
 set -g prefix C-a
-unbind-key C-m
-bind-key  -T root   C-m       send-prefix
+unbind-key C-z
+bind-key  -T root   C-z       send-prefix
 bind-key            C-a       send-prefix
+
+
+##################################################################
+##
+##    ネスト時のプレフィックス
+##
 
 
 ##################################################################
