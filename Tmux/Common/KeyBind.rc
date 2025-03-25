@@ -72,8 +72,7 @@ bind-key            S-Right   next-window
 bind-key            j         next-window
 bind-key            C-j       next-window
 
-bind-key  -T root   C-Left    previous-window
-bind-key  -T root   C-Right   next-window
+source-file  ~/Settings/Tmux/Common/KeyBind-Root.rc
 
 # Ctl-a Shif-A  ウィンドウ (タブ) の名前を変える
 bind-key            A         command-prompt -I "#W" "rename-window '%%'"

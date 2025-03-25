@@ -1,0 +1,8 @@
+
+##################################################################
+##
+##    ウィンドウ切り替え操作
+##
+
+bind-key  -T root       C-Left      previous-window
+bind-key  -T root       C-Right     next-window
