@@ -6,8 +6,8 @@
 
 # プレフィックスキーを screen と同じ Ctl-a  に変更
 set -g prefix C-a
-unbind-key C-b
-bind-key  -T root   C-b       send-prefix
+unbind-key C-m
+bind-key  -T root   C-m       send-prefix
 bind-key            C-a       send-prefix
 
 
