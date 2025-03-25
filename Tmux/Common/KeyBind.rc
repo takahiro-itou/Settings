@@ -14,15 +14,16 @@ bind-key            C-a       send-prefix
 ##    ネスト時のプレフィックス
 ##
 
-bind-key                C-n         switch-client  -T nested
+# bind-key                C-n         switch-client  -T nested
 
-bind-key  -T nested     F7          run-shell  \
-    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  disable  F7'
-bind-key  -T nested     F9          run-shell  \
-    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  enable   F9'
+bind-key  -T prefix     C-F7        run-shell  \
+    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  disable  C-F7'
 
-bind-key  -T nested     F7          send-key  F7
-bind-key  -T nested     F9          send-key  F9
+bind-key  -T prefix     C-F8        run-shell  \
+    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  enable   C-F8'
+
+bind-key  -T prefix     C-F9        run-shell  \
+    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  change   C-F9'
 
 
 ##################################################################
@@ -48,6 +49,7 @@ bind-key  -T copy-mode-vi   M-w     send-keys -X copy-pipe "tmux copy-buffer"
 
 bind-key  -T copy-mode-vi   Enter   send-keys -X copy-selection-and-cancel
 bind-key  -T copy-mode-vi   Escape  send-keys -X cancel
+
 
 ##################################################################
 ##
