@@ -16,14 +16,18 @@ bind-key            C-a       send-prefix
 
 # bind-key                C-n         switch-client  -T nested
 
-bind-key  -T prefix     C-F7        run-shell  \
+bind-key  -T root       C-F7        run-shell  \
     '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  disable  C-F7'
 
-bind-key  -T prefix     C-F8        run-shell  \
+bind-key  -T root       C-F8        run-shell  \
     '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  enable   C-F8'
 
-bind-key  -T prefix     C-F9        run-shell  \
+bind-key  -T root       C-F9        run-shell  \
     '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  change   C-F9'
+
+bind-key  -T prefix     C-F7        send-key  C-F7
+bind-key  -T prefix     C-F8        send-key  C-F8
+bind-key  -T prefix     C-F9        send-key  C-F9
 
 
 ##################################################################
