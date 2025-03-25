@@ -19,7 +19,7 @@ else
     nested=$(tmux show-option -v @nested)
     tmux set-option @nested "${nested#N}"
     if test "${nested}" = "N" ; then
-        tmux  set-option satus-style  bg=white
+        tmux  set-option status-style  bg=white
         tmux  unbind-key        C-z
         tmux  set-option prefix C-a
         tmux  source-file  ~/Settings/Tmux/Common/KeyBind-Root.rc
@@ -28,4 +28,4 @@ else
     fi
 fi
 
-# set-option -g status-left "[#S]#{?@nested, #{@nested},}"
+tmux  set-option -g  status-left  "[#S]#{?@nested, #{@nested},}"
