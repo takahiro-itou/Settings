@@ -6,8 +6,6 @@
 
 # プレフィックスキーを screen と同じ Ctl-a  に変更
 set -g prefix C-a
-unbind-key C-z
-bind-key  -T root   C-z       send-prefix
 bind-key            C-a       send-prefix
 
 
@@ -16,13 +14,15 @@ bind-key            C-a       send-prefix
 ##    ネスト時のプレフィックス
 ##
 
-bind-key  -T root   C-F7        run-shell  \
-    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  disable C-F7'
-bind-key  -T root   C-F9        run-shell  \
-    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  enable  C-F9'
+bind-key                C-n         switch-client  -T nested
 
-bind-key            C-F7        send-key C-F7
-bind-key            C-F9        send-key C-F9
+bind-key  -T nested     F7          run-shell  \
+    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  disable  F7'
+bind-key  -T nested     F9          run-shell  \
+    '/bin/bash ~/Settings/Tmux/Common/NestedPrefix.sh  enable   F9'
+
+bind-key  -T nested     F7          send-key  F7
+bind-key  -T nested     F9          send-key  F9
 
 
 ##################################################################
