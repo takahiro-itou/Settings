@@ -1,6 +1,7 @@
 
 if [ "x${MYBASH_ECHO_LOADING_BASHRC}y" = "xTRUEy" ] ; then
   echo  "Start  Loading : ${HOME}/Settings/Bash/Bashrc.sh"  1>&2
+  echo  "Host : $(hostname)"  1>&2
 fi
 
 for  file  in  /etc/bashrc  ; do

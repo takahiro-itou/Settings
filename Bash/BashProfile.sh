@@ -1,6 +1,7 @@
 
 if [ "x${MYBASH_ECHO_LOADING_BASHPROFILE}y" = "xTRUEy" ] ; then
   echo  "Start  Loading : ${HOME}/Settings/Bash/BashProfile.sh"  1>&2
+  echo  "Host : $(hostname)"  1>&2
 fi
 
 if [ -f ~/Settings/Bash/Bashrc.sh ] ; then
